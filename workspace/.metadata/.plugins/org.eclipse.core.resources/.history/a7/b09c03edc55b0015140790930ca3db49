@@ -1,0 +1,34 @@
+import flatcraft.*;
+
+public class SmartPlayer extends Player {
+
+	@Override
+	protected void onKeyDown(int keyCode) {
+		switch(keyCode) {
+			case Key.LEFT:
+				move(-1, 0);
+				break;
+			case Key.RIGHT:
+				move(1, 0);
+				break;
+			case Key.SPACE:
+				move(0, 1);
+				
+				long time = System.currentTimeMillis();
+				while(System.currentTimeMillis() < time + 500 ) {
+					
+				}
+				
+				move(0, -1);
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				//move(0, -1);
+				break;
+		}
+	}
+	
+}

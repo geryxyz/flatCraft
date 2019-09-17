@@ -1,0 +1,16 @@
+import flatcraft.Building;
+import flatcraft.World;
+
+
+public class Stairway extends Building {
+
+	public Stairway(World world) {
+		super(world);
+	}
+
+	@Override
+	public void build() {
+		
+	}
+	
+}

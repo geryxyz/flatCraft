@@ -1,0 +1,55 @@
+/* TASK: Collect all the apples and find a way to the door without breaking any blocks. */
+
+import flatcraft.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Game game = new Game(Level.PLATFORMS);
+		World world = game.getWorld();
+		
+		game.start();
+		
+		Player player = new Player("Joe Scamfan");
+		world.addPlayer(player);
+		
+		Stairway stairway = new Stairway(3, true);
+		stairway.build(world, 3, 5);
+		
+		moveToDoor(player);
+		
+	}
+	
+	public static void moveToDoor(Player player) {
+		int steps = 20;
+		
+		for(int s = 0; s < steps; s++) {
+			if(s < 7) {
+				player.act(Action.MOVE_RIGHT);
+			}
+			else if(s < 9) {
+				player.act(Action.JUMP_RIGHT);
+			}
+			else if(s < 10) {
+				player.act(Action.MOVE_RIGHT);
+			}
+			else if(s < 11) {
+				player.act(Action.JUMP_RIGHT);
+			}
+			else if(s < 12) {
+				player.act(Action.MOVE_RIGHT);
+			}
+			else if(s < 13) {
+				player.act(Action.MOVE_LEFT);
+			}
+			else if(s < 14) {
+				player.wait(1000);
+			}
+			else if(s < 15) {
+				player.act(Action.MOVE_LEFT);
+			}
+		}
+	}
+
+}

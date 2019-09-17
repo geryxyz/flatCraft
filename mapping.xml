@@ -1,0 +1,131 @@
+<mapping version="1.0">
+    <resources>
+        <constant name="cellar_character" value="planks"/>
+        <constant name="cellar_external_character" value="wood"/>
+    </resources>
+    <linking>
+        <source name="Method" from="McCC" />
+        <target name="floor" to="external_character" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="glass"/>
+                <parameter name="level1" value="sandstone"/>
+                <parameter name="level2" value="stone"/>
+                <parameter name="level3" value="metal"/>
+                <parameter name="level4" value="obsidian"/>
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Method" from="McCC" />
+        <target name="floor" to="character" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="glass"/>
+                <parameter name="level1" value="sandstone"/>
+                <parameter name="level2" value="stone"/>
+                <parameter name="level3" value="metal"/>
+                <parameter name="level4" value="obsidian"/>
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Method" from="LLOC" />
+        <target name="floor" to="height" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Method" from="NII" />
+        <target name="floor" to="width" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Method" from="NOI" />
+        <target name="floor" to="length" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Attribute" from="WarningP1" />
+        <target name="cellar" to="height" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Attribute" from="WarningP2" />
+        <target name="cellar" to="width" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Attribute" from="WarningP3" />
+        <target name="cellar" to="length" />
+        <conversions>
+            <conversion type="to int">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Constant" from="cellar_character"/>
+        <target name="cellar" to="character" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="planks"/>
+                <parameter name="level1" value="stone"/>
+                <parameter name="level2" value="metal"/>
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Constant" from="cellar_external_character"/>
+        <target name="cellar" to="external_character" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="wood"/>
+                <parameter name="level1" value="stone_brick"/>
+                <parameter name="level2" value="metal"/>
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Class" from="RFC" />
+        <target name="garden" to="tree-ratio" />
+        <conversions>
+            <conversion type="normalize">
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Method" from="NUMPAR" />
+        <target name="floor" to="torches" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="1"/>
+                <parameter name="level1" value="2"/>
+                <parameter name="level2" value="3"/>
+            </conversion>
+        </conversions>
+    </linking>
+    <linking>
+        <source name="Attribute" from="WarningP0" />
+        <target name="cellar" to="torches" />
+        <conversions>
+            <conversion type="quantization">
+                <parameter name="level0" value="1"/>
+                <parameter name="level1" value="2"/>
+            </conversion>
+        </conversions>
+    </linking>
+</mapping>

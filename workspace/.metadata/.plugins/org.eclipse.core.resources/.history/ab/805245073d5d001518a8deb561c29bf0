@@ -1,0 +1,62 @@
+package flatcraft;
+import java.awt.EventQueue;
+import java.lang.reflect.InvocationTargetException;
+
+import flatcraft.gui.MainWindowGui;
+import flatcraft.worlds.*;
+
+public class Game {
+	
+	public static MainWindowGui mainWindow;
+	
+	private World world;
+	private Level level;
+	
+	public Game(Level level) {
+		this.level = level;
+		createWorld();	
+	}
+
+	public void start() {
+		initGui();
+		
+	}
+	
+	private void initGui() {
+		try {
+			EventQueue.invokeAndWait(new Runnable() {
+				public void run() {
+					mainWindow = new MainWindowGui();
+					mainWindow.setVisible(true);
+				}
+			});
+		} catch (InvocationTargetException | InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void createWorld() {
+		int rows = MainWindowGui.BLOCK_ROWS;
+		int cols = MainWindowGui.BLOCK_COLUMNS;
+		
+		switch(level) {
+			case EMPTY:
+				world = new EmptyWorld(rows, cols);
+				break;
+			case FLAT:
+				world = new FlatWorld(rows, cols);
+				break;
+			case STAIR_BUILDER:
+				world = new StairwayWorld(rows, cols);
+				break;
+			case SHEPHERD:
+				world = new SheepWorld(rows, cols);
+				break;
+		}
+	}
+
+	public World getWorld() {
+		return world;
+	}
+
+}

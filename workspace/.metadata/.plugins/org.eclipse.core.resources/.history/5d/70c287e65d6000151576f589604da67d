@@ -1,0 +1,45 @@
+package flatcraft.worlds;
+
+import flatcraft.World;
+import flatcraft.blocks.AirBlock;
+import flatcraft.blocks.Block;
+import flatcraft.blocks.DirtBlock;
+import flatcraft.blocks.GrassBlock;
+
+public class PlatformsWorld extends World {
+
+	public PlatformsWorld(int rows, int columns) {
+		super(rows, columns);
+		
+		Block air = new AirBlock();
+		Block drt = new DirtBlock();
+		Block grs = new GrassBlock();
+		
+		Block[][] blockMatrix = new Block[][]
+				{
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air },
+					{ grs, grs, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air, air }
+				};
+		
+		for(int y = blockMatrix.length - 1; y >= 0; y--) {
+			for(int x = 0; x < blockMatrix[y].length; x++) {
+				placeBlock(x, y, blockMatrix[y][x]);
+			}
+		}
+		
+	}
+
+	@Override
+	public void breakBlock(int x, int y) {
+		System.err.println("Oops! You cannot break blocks in this world. Find another way to win the game.");
+	}
+
+}

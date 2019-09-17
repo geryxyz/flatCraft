@@ -1,0 +1,18 @@
+import flatcraft.Building;
+import flatcraft.World;
+
+public class Bridge implements Building {
+
+	private int length;
+	
+	public Bridge(int length) {
+		this.length = length;
+	}
+	
+	@Override
+	public void build(World world, int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

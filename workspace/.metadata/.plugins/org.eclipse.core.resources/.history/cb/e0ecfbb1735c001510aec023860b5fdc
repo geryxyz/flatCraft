@@ -1,0 +1,33 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.Timer;
+
+import flatcraft.*;
+
+public class SmartPlayer extends Player {
+
+	@Override
+	protected void onKeyDown(int keyCode) {
+		switch(keyCode) {
+			case Key.LEFT:
+				move(-1, 0);
+				break;
+			case Key.RIGHT:
+				move(1, 0);
+				break;
+			case Key.SPACE:
+				move(0, 1);
+				
+				Timer t = new Timer(1000 * 5, new ActionListener() {
+				    public void actionPerformed(ActionEvent e) {
+				    	move(0, -1);
+				    }
+				});
+				
+				//wait(500);
+				//move(0, -1);
+				break;
+		}
+	}
+	
+}

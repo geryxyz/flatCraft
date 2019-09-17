@@ -1,0 +1,23 @@
+import flatcraft.Building;
+import flatcraft.World;
+import flatcraft.blocks.Block;
+
+
+public class Stairway extends Building {
+
+	public Stairway(World world) {
+		super(world);
+	}
+
+	@Override
+	public void build() {
+		Block stoneBlock = new StoneBlock();
+		
+		for(int y = 3; y <= 7; y++) {
+			for(int x = 13; x <= 17; x++) {
+				world.placeBlock(x, y, stoneBlock);
+			}
+		}
+	}
+	
+}

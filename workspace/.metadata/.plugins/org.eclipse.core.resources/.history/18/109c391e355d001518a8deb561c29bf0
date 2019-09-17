@@ -1,0 +1,13 @@
+import flatcraft.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Game game = new Game(Level.SHEPHERD);
+		game.start();
+		
+		World world = game.getWorld();
+		world.breakBlock(5, 3);
+	}
+
+}

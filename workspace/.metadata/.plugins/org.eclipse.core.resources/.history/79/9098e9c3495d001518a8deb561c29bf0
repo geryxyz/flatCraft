@@ -1,0 +1,21 @@
+import flatcraft.*;
+import flatcraft.blocks.Block;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Game game = new Game(Level.SHEPHERD);
+		World world = game.getWorld();
+		
+		Block planks = new PlanksBlock();
+		
+		/*for(int x = 7; x < 12; x++) {
+			world.placeBlock(x, 2, planks);
+		}
+		
+		world.breakBlock(5, 3);*/
+		
+		game.start();
+	}
+
+}

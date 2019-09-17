@@ -1,0 +1,22 @@
+package flatcraft;
+
+public class Sheep extends Player {
+
+	public Sheep() {
+		image = Images.SHEEP_RIGHT;
+		startPatrol();
+	}
+	
+	void startPatrol() {
+		final Sheep sheep = this;
+		Thread thread = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				sheep.move(1, 0);
+			}
+		});
+		thread.run();
+	}
+	
+}

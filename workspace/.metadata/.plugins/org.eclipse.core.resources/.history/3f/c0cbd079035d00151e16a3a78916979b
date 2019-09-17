@@ -1,0 +1,51 @@
+package flatcraft;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import flatcraft.gui.MainWindowGui;
+
+public final class Images {
+
+	public static BufferedImage PLAYER;
+	public static BufferedImage BLOCK_DIRT;
+	public static BufferedImage BLOCK_AIR;
+	public static BufferedImage BLOCK_STONE;
+	
+	static {
+		PLAYER = getResizedImage("/resources/images/player.jpg");
+		BLOCK_DIRT = getResizedImage("/resources/images/block_dirt.jpg");
+		BLOCK_AIR = getResizedImage("/resources/images/block_air.jpg");
+		BLOCK_STONE = getResizedImage("/resources/images/block_stone.jpg");
+	}
+	
+	private static BufferedImage getResizedImage(String path) {
+		BufferedImage img = getImage(path);
+		return resize(img, MainWindowGui.BLOCK_SIZE, MainWindowGui.BLOCK_SIZE);
+	}
+
+	private static BufferedImage getImage(String path) {
+		BufferedImage result = null;
+		try {
+			result = ImageIO.read(Images.class.getResourceAsStream(path));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public static BufferedImage resize(BufferedImage img, int newWidth, int newHeight) { 
+	    Image tmp = img.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
+	    BufferedImage result = new BufferedImage(newWidth, newHeight, BufferedImage.TYPE_INT_ARGB);
+
+	    Graphics2D g2d = result.createGraphics();
+	    g2d.drawImage(tmp, 0, 0, null);
+	    g2d.dispose();
+
+	    return result;
+	}
+	
+}

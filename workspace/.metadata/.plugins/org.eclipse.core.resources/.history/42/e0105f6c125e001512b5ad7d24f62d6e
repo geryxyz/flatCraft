@@ -1,0 +1,5 @@
+package flatcraft.blocks;
+
+public class GrassBlock extends Block {
+
+}

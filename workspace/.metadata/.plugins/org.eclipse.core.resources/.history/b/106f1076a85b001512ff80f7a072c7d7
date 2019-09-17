@@ -1,0 +1,7 @@
+package flatcraft.gui;
+
+public interface KeyDownListener {
+	
+	onKeyDown()
+	
+}

@@ -1,0 +1,9 @@
+package flatcraft.gui;
+
+import java.awt.event.KeyEvent;
+
+public interface KeyDownListener {
+	
+	public void onKeyDown(KeyEvent e);
+	
+}
