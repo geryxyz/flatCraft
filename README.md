@@ -1,19 +1,21 @@
 # flatCraft
 Sample tasks for future Java developers based on Microsoft Minecraft
-These sample task uses the general logic of Minecraft to introduce and intreeg students about software development. During the long term special courses (held by University of Szeged) we using a Minecraft to illustrate hihgly abstract concepts like software visualization and software analyzis. We are a proud user of [CodeMetropolis](http://codemetropolis.github.io/CodeMetropolis/) software vizualization toolkit.
+These sample task uses the general logic of Minecraft to introduce and interest students about software development. During the long term special courses (held by University of Szeged) we are using a Minecraft to illustrate highly abstract concepts like software visualization and software analysis. We are a proud user of [CodeMetropolis](http://codemetropolis.github.io/CodeMetropolis/) software visualization toolkit.
 
 ## Levels of difficulty
 
-# Beginner
+### Beginner
 
-Tasks for this are contained under `FlatCraftExample` folder. The target audience is primery school children and their parents who has no or very little experience of software development. The goal is to introduce basic conceopts like: statement and program code.
+Tasks for this are contained under `FlatCraftExample` folder. The target audience is primary school children and their parents, who have no or minimal experience in software development. The goal is to introduce fundamental concepts like statement and program code.
 
-# Intermediate
+### Intermediate
 
-The more challenging task is located in `FlatCraftSheepExample`. We target the later years of primary and the whole duration of secondary shools. These children potentially have several classes about software development in a wide variaty of languages. Our primary goal is to introduce the syntax of Java programing language.
+The more challenging task is located in `FlatCraftSheepExample`. We target the later years of primary and the whole duration of secondary schools. These children potentially have several classes on software development in a wide variety of languages. Our primary goal is to introduce the syntax of Java programing language.
 
-# Expert
+### Expert
 
-The folder `FlatCraftPlatformsExample` contains the most difficult tasks. We use them to introduce abstract concepts like software visualization and analyzis, while providing challenging tasks for those who are able to write Java programs without supervision.
+The folder `FlatCraftPlatformsExample` contains the most difficult tasks. We use them to introduce abstract concepts like software visualization and analysis while providing challenging tasks for those who can write Java programs without supervision.
 
-Minecraft is a property of Mojang AB. We do not sell or distribute it in any way.
+## Notes
+
+[Minecraft](https://www.minecraft.net/en-us/) is a property of Mojang AB. We do not sell or distribute it in any way.
