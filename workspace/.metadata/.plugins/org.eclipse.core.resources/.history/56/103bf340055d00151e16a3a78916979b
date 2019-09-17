@@ -1,5 +1,0 @@
-package flatcraft;
-
-public interface Building {
-
-}

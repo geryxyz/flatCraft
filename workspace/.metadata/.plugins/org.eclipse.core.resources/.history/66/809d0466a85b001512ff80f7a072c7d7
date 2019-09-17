@@ -1,5 +1,0 @@
-package flatcraft.gui;
-
-public interface KeyDownHandler {
-
-}
